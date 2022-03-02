@@ -104,6 +104,8 @@ export async function getStaticProps({ params, preview = false }) {
             ...graphqlRequest,
             initialData: await request(graphqlRequest),
             token: process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+            environment: process.env.NEXT_DATOCMS_ENVIRONMENT || null,
+            baseUrl: "https://graphql-listen-staging.datocms.com",
           }
         : {
             enabled: false,
