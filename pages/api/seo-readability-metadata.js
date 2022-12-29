@@ -29,6 +29,7 @@ const handler = async (req, res) => {
 
   const client = buildClient({
     apiToken: process.env.NEXT_EXAMPLE_CMS_DATOCMS_API_TOKEN,
+    baseUrl: 'https://site-api-staging.datocms.com',
     environment: req.query.sandboxEnvironmentId,
   });
 

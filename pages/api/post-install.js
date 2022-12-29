@@ -54,7 +54,7 @@ export default async (req, res) => {
     return res.status(404).json({ error: 'Invalid route' });
   }
 
-  const client = buildClient({ apiToken: req.body.datocmsApiToken });
+  const client = buildClient({ apiToken: req.body.datocmsApiToken, baseUrl: 'https://site-api-staging.datocms.com' });
 
   try {
     await Promise.all([
